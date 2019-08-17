@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #302ae6;
+  --secondary-color: #c5c5c5;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --secondary-bg-color: #ededed;
+  --heading-color: #292922;
+  --sombra-botao: #bbb;
+}
+
+[data-theme="dark"] {
+  --primary-color: #9a97f3;
+  --secondary-color: #414141;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --secondary-bg-color: #1d1d1d;
+  --sombra-botao: #222;
+}
+
+html,
+body {
+  /* background: var(--bg-color); */
+  color: var(--font-color);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+}
+
+.tela {
+  max-width: 1200px;
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+}
+
+.container {
+  background: var(--secondary-bg-color);
+  width: 30%;
+  height: calc(100% - 20px);
+
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 4px 4px 6px #bbb;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+
+  justify-items: center;
+  align-items: center;
+}
+
+.container > div,
+.container > Botao {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.container .resultado {
+  grid-column: 1/5;
+  /* color: white; */
+  font-size: 2rem;
+  justify-content: end;
+  align-content: start;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.container .operacoes {
+  /* color: rgb(121, 121, 121); */
+  grid-column: 1/5;
+  justify-content: end;
+}
+
+.botao {
+  display: inline-block;
+  /* padding: 100% 100%; */
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  background: var(--secondary-color);
+  /* color: #cccccc; */
+  border: 0;
+  border-radius: 20px;
+
+  box-shadow: 4px 4px 6px var(--sombra-botao);
+}
+
+.zero {
+  grid-column: 1/3;
+}
+
+.operadores {
+  background: #ff9a27;
+  color: white;
+}
+
+.operador-igual {
+  background: #38ff59 !important;
+  color: white;
+}
+
+.botao-limpar {
+  background: #4b1818 !important;
+  color: rgb(255, 137, 137);
+}
+
+.botao:hover {
+  background: #535353;
+  color: rgba(1, 1, 1, 0.8);
+}
+button:active,
+button:hover:active {
+  background: #1e1e1e;
+  color: rgba(1, 1, 1, 0.8);
+}
+
+button:focus {
+  outline: 0;
+}
